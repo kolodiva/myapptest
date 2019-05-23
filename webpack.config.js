@@ -39,7 +39,7 @@ module.exports = {
   ],  
   devServer: {
     contentBase: './dist',
-    hot: false,
+    hot: true,
     port: 3000
   }
 };
