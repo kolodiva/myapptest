@@ -7,7 +7,7 @@ const title = 'Hello World from React Node Babel...';
 
 class Welcome extends React.Component {
   render() {
-    return <h1 className='header'>{title}</h1>;
+    return <h1 className='header' title='difficulties' style={{cursor: 'pointer'}} onClick={(e) => { alert('Yobana') } }>{title}</h1>;
   }
 }
 
