@@ -36,6 +36,6 @@ module.exports = {
   ],  
   devServer: {
     contentBase: './build',
-    hot: true
+    hot: false
   }
 };
