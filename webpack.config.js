@@ -1,8 +1,14 @@
 const webpack = require('webpack');
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   devtool: 'inline-source-map',
   entry: './src/index.js',
+  output: {
+    path: __dirname + '/dist',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
   module: {
     rules: [
       
@@ -26,16 +32,18 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },  
-  output: {
-    path: __dirname + '/build',
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    
+    new webpack.HotModuleReplacementPlugin(),
+
+    new HtmlWebPackPlugin({
+          template: "./src/index.html",
+          filename: "./index.html"
+      })    
   ],  
   devServer: {
-    contentBase: './build',
-    hot: false
+    contentBase: './dist',
+    hot: false,
+    port: 3000
   }
 };
