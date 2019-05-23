@@ -12,7 +12,7 @@ const popover = (
   </Popover>
 );
 
-const Example = () => (
+const Example = () =>  (
   <OverlayTrigger placement="auto" overlay={popover} delay={{ show: 250, hide: 400 }}>
     <Button variant="success">Click me to see</Button>
   </OverlayTrigger>
