@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -34,12 +34,8 @@ module.exports = {
   },  
   plugins: [
     
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin()
 
-    new HtmlWebPackPlugin({
-          template: "./src/index.html",
-          filename: "./index.html"
-      })    
   ],  
   devServer: {
     contentBase: './dist',
